@@ -6,6 +6,7 @@ require('dotenv').config();
 //Routes
 const groceriesRouter = require('./routes/groceries');
 const userRouter = require('./routes/user');
+const ordersRouter = require('./routes/orders');
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.get("/",(req,res) => {
 
 app.use("/api/groceries", groceriesRouter);
 app.use("/api/user", userRouter);
+app.use("/api/orders", ordersRouter);
 
 
 const client =new MongoClient(process.env.DB_URI);

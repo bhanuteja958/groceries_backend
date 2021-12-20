@@ -11,7 +11,7 @@ router.get("/", async (req,res) => {
         res.status(200).json({
             status:'ok',
             data:{
-                groceries: grooceries,
+                groceries: groceries,
             }
         });
     } catch(e) {
